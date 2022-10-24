@@ -1,0 +1,18 @@
+{
+    "name": "weather1023",
+    "version": "1.0.0",
+    "description": "This is a weather website",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ken Chiang",
+    "license": "ISC",
+    "dependencies": {
+        "ejs": "^3.1.8",
+        "express": "^4.18.2",
+        "node-fetch": "^2.6.7",
+        "node-navigator": "^1.0.1",
+        "nodemon": "^2.0.20"
+    }
+}

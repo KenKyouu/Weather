@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title><%= djs.name %> (<%= djs.sys.country %>)</title>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div id="box1" class="box blurred-bg tinted">
+            <div class="content">
+                <h1><%= djs.name %>, <%= djs.sys.country %></h1>
+                <div class="icon">
+                    <img src="<%= weatherUrl %>" alt="" />
+                </div>
+                <h1><%= newTemp %>°C</h1>
+                <h2><%= djs.weather[0].description %></h2>
+                <p>
+                    最低<%= newMin
+                    %>°C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最高<%= newMax %>°C
+                </p>
+            </div>
+            <div class="info">
+                <div class="feelLike">
+                    <h4>體感溫度</h4>
+                    <h2><%= newFeelsLike %>°C</h2>
+                </div>
+                <div class="humidity">
+                    <h4>濕度</h4>
+                    <h2><%= djs.main.humidity %>%</h2>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $("#box1").draggable();
+            });
+        </script>
+    </body>
+</html>
