@@ -4,6 +4,7 @@ const ejs = require("ejs");
 const { Navigator } = require("node-navigator");
 const navigator = new Navigator();
 const fetch = require("node-fetch");
+const PORT = process.env.PORT || 3030;
 
 // api key
 const myKey = "bc580dee07f04f0a2a5fa495d45e9e0c";
@@ -49,6 +50,6 @@ app.get("/", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Server is running on port 3000.");
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}.`);
 });
